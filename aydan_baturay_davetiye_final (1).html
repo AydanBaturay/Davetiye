@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aydan & Baturay | Davetiye</title>
+<style>
+  :root{--bg:#fbfaf8;--ink:#222;--muted:#777;--line:#d9d4ce;--accent:#111;}
+  *{box-sizing:border-box} body{margin:0;background:linear-gradient(#fff,#f6f1eb);color:var(--ink);font-family:Georgia,'Times New Roman',serif;}
+  .wrap{max-width:560px;margin:auto;min-height:100vh;padding:34px 22px 60px;}
+  .card{background:rgba(255,255,255,.84);border:1px solid var(--line);border-radius:28px;padding:34px 24px;box-shadow:0 18px 60px rgba(0,0,0,.08);}
+  .hero{text-align:center;padding:22px 0 36px}.script{font-family:cursive;font-size:28px;font-style:italic;display:inline-block;margin-right:6px;color:#111}.names{font-size:54px;line-height:.95;letter-spacing:9px;font-weight:400}.sub{margin-top:34px;letter-spacing:2px;color:#666;font-size:16px}.parents{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:36px 0;color:#666;letter-spacing:1.5px;font-size:16px}.event{border-left:2px solid #111;padding-left:16px;margin:22px 0}.label{font-size:18px}.date{font-size:48px;letter-spacing:3px;font-weight:300}.day{font-size:18px;font-style:italic}.place{font-size:18px;letter-spacing:1.5px;margin-top:14px}.note{font-size:15px;font-style:italic;margin-top:12px;color:#444}.divider{height:1px;background:#222;margin:22px 0}.btn{display:block;width:100%;border:1px solid #111;background:#111;color:#fff;border-radius:999px;padding:15px 18px;text-align:center;text-decoration:none;font-family:Arial,sans-serif;font-size:15px;margin:12px 0}.btn.secondary{background:#fff;color:#111}.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;margin:22px 0}.count div{border:1px solid var(--line);border-radius:16px;padding:12px 6px;background:#fff}.count b{display:block;font-size:24px}.form{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);font-family:Arial,sans-serif}.form h2{text-align:center;font-family:Georgia,serif;letter-spacing:2px;font-weight:400}.field{margin:14px 0}.field label{display:block;margin-bottom:6px;color:#555;font-size:14px}input,select,textarea{width:100%;padding:13px;border:1px solid #d8d2cc;border-radius:14px;font-size:16px;background:#fff}textarea{min-height:80px}.tiny{text-align:center;color:#777;font-size:13px;margin-top:12px;font-family:Arial,sans-serif}.footer{text-align:center;margin-top:28px;color:#777;font-style:italic}.toast{display:none;text-align:center;background:#eef8ee;border:1px solid #badcba;border-radius:14px;padding:12px;margin-top:14px;font-family:Arial,sans-serif}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+  <section class="hero"><div><span class="script">are</span><span class="names">AYDAN<br>BATURAY</span></div><div class="sub">ÖZEL GÜNLER BİRLİKTE GÜZEL!<br>DAVETLİSİNİZ...</div></section>
+  <div class="parents"><div>MÜZEYYEN - CEMAL<br>ATTAY</div><div>YAŞANUR - AYHAN<br>AKKILIÇ</div></div>
+  <section class="event"><div class="label">Kına</div><div class="date">03.07.2026</div><div class="day">Cuma - 20.00</div><div class="place">ÇAKMAK KÖYÜ<br>Uzunköprü / Edirne</div><div class="note">Saat 18.00’de yemek verilecektir.</div><a class="btn secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%C3%87akmak+K%C3%B6y%C3%BC+Uzunk%C3%B6pr%C3%BC+Edirne">Kına yol tarifi</a></section>
+  <div class="divider"></div>
+  <section class="event"><div class="label">Düğün</div><div class="date">04.07.2026</div><div class="day">Cumartesi - 20.00</div><div class="place">FESTIVAL WEDDING GARDEN<br>Atatürk Mah. Festival Alanı Babaeski / Kırklareli</div><div class="note">Alay: Araçlar 4 Temmuz saat 10.00’da hanemizden hareket edecektir.<br>Alaydan sonra hanemizde yemek verilecektir.<br>Takı kapıda olacaktır.</div><a class="btn secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Festival+Wedding+Garden+Babaeski+K%C4%B1rklareli">Düğün yol tarifi</a></section>
+  <div class="count" id="count"><div><b id="d">20</b>Gün</div><div><b id="h">20</b>Saat</div><div><b id="m">42</b>Dk</div><div><b id="s">33</b>Sn</div></div>
+  <section class="form"><h2>Katılım Durumu</h2><form id="rsvp"><div class="field"><label>Ad Soyad</label><input name="ad" required placeholder="Adınızı yazın"></div><div class="field"><label>Katılım</label><select name="durum" required><option value="Geliyorum">Geliyorum</option><option value="İki kişi geleceğiz">İki kişi geleceğiz</option><option value="Katılamıyorum">Katılamıyorum</option><option value="Henüz emin değilim">Henüz emin değilim</option></select></div><div class="field"><label>Kişi sayısı</label><input name="kisi" type="number" min="1" max="10" value="1"></div><div class="field"><label>Not</label><textarea name="not" placeholder="İsteğe bağlı"></textarea></div><button class="btn" type="submit">Cevabı Gönder</button><div class="toast" id="toast">Cevabınız kaydedildi. Teşekkür ederiz ❤️</div><p class="tiny">Cevabınız doğrudan Aydan & Baturay katılım listesine kaydedilir.</p></form></section>
+  <div class="footer">Aydan & Baturay</div>
+</div></div>
+<script>
+// Geri sayım: 4 Temmuz 2026, 20:00 (yerel saat)
+const target = new Date(2026, 6, 4, 20, 0, 0);
+function tick(){
+  const now = new Date();
+  let x = target.getTime() - now.getTime();
+
+  if (x <= 0) {
+    document.getElementById('count').innerHTML = '<div style="grid-column:1 / -1"><b>Bugün</b>En mutlu günümüz ❤️</div>';
+    return;
+  }
+
+  const d = Math.floor(x / 86400000); x %= 86400000;
+  const h = Math.floor(x / 3600000); x %= 3600000;
+  const m = Math.floor(x / 60000);
+  const s = Math.floor((x % 60000) / 1000);
+
+  document.getElementById('d').textContent = d;
+  document.getElementById('h').textContent = h;
+  document.getElementById('m').textContent = m;
+  document.getElementById('s').textContent = s;
+}
+setInterval(tick,1000);
+tick();
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxpPxdNSNA4cUM_QMFAO758EU4_sMZGC0DbQTMKPqNQ8pmWzRtCPS4yChSH7TvmslLA/exec';
+document.getElementById('rsvp').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const toast = document.getElementById('toast');
+  const data = Object.fromEntries(new FormData(form));
+  btn.disabled = true;
+  btn.textContent = 'Gönderiliyor...';
+  toast.style.display = 'none';
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    });
+    toast.textContent = 'Cevabınız kaydedildi. Teşekkür ederiz ❤️';
+    toast.style.display = 'block';
+    form.reset();
+  } catch (err) {
+    toast.textContent = 'Bir hata oluştu. Lütfen tekrar deneyin.';
+    toast.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Cevabı Gönder';
+  }
+});
+</script>
+</body></html>
